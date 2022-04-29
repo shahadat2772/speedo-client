@@ -1,7 +1,7 @@
 .bannerImage {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://i.ibb.co/P9LWTc2/pexels-samed-gojak-5290536.jpg");
-  height: 80vh;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

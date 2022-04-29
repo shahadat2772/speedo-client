@@ -1,0 +1,67 @@
+.formHeader {
+  color: rgba(199, 8, 27, 1);
+}
+
+.formContent {
+  width: 400px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.formContent form input:not([type="submit"]) {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  height: 40px;
+  margin-bottom: 10px;
+  border: 1px solid gray;
+  background: rgba(255, 255, 255, 0.164);
+  color: white;
+  padding-left: 10px;
+}
+
+.formSubmitBtn {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  display: block;
+  background-color: rgba(199, 8, 27, 0.322);
+  color: white;
+  margin-top: 15px;
+}
+
+.formSubmitBtn:hover {
+  background-color: rgba(199, 8, 27, 0.527);
+}
+
+.formBanner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://i.ibb.co/P9LWTc2/pexels-samed-gojak-5290536.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.formToggleBtn {
+  cursor: pointer;
+  color: gray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.formToggleBtn:hover {
+  color: rgba(199, 8, 27, 0.788);
+}
+
+@media only screen and (max-width: 576px) {
+  .formContent {
+    width: 330px;
+  }
+}

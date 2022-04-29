@@ -7,7 +7,7 @@
 .footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 25px 110px 40px 110px;
+  padding: 25px 0px 40px 0px;
   gap: 40px;
 }
 
@@ -52,6 +52,5 @@
 @media only screen and (max-width: 576px) {
   .footer {
     grid-template-columns: 1fr;
-    padding: 25px 25px 40px 25px;
   }
 }
