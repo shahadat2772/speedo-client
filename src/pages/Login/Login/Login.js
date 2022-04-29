@@ -9,7 +9,8 @@ const Login = () => {
   // Form Hook
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    const email = data.email;
+    const password = data.password;
   };
 
   return (

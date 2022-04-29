@@ -2,16 +2,50 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import "./Register.css";
-
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { auth } from "../../../firebase.init";
+import Loading from "../../Shared/Loading/Loading";
+import toast from "react-hot-toast";
 const Register = () => {
   // Navigator
   const navigate = useNavigate();
+  const { register, handleSubmit } = useForm();
+
+  // Hook For User Creation in firebase
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
+
+  if (loading) {
+    return <Loading></Loading>;
+  }
+
+  if (error) {
+    toast.error(error.message, {
+      id: "registeredSuccess",
+    });
+  }
 
   // Form Hook
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    const name = data.name;
+    const email = data.email;
+    const password = data.password;
+    const confirmPassword = data.confirmPassword;
+
+    if (password !== confirmPassword) {
+      return toast.error("Confirm password did not matched!", {
+        id: "passwordDidNotMatched",
+      });
+    }
+
+    await createUserWithEmailAndPassword(email, password);
   };
+  if (user) {
+    toast.success("Registered Successfully", {
+      id: "registeredSuccess ",
+    });
+    navigate("/home");
+  }
 
   return (
     <div className="formBanner">
@@ -22,7 +56,6 @@ const Register = () => {
             type={`text`}
             autoComplete="off"
             placeholder="NAME"
-            required
             {...register("name")}
           />
           <input
