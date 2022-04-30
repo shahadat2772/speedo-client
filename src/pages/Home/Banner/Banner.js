@@ -4,8 +4,8 @@ import "./Banner.css";
 const Banner = () => {
   return (
     <div>
-      <div class="bannerImage">
-        <div class="bannerContent">
+      <div className="bannerImage">
+        <div className="bannerContent">
           <h1>
             LET'S BOOM YOUR <br /> BUSINESS TOGETHER
           </h1>

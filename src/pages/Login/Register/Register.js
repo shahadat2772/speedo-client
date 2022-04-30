@@ -1,13 +1,15 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Register.css";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
 import toast from "react-hot-toast";
+import { useUpdateProfile } from "react-firebase-hooks/auth";
 const Register = () => {
   // Navigator
+  const location = useLocation();
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
 
@@ -15,19 +17,24 @@ const Register = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
 
+  // Hook to update users info
+  const [updateProfile, updating, userUpdateError] = useUpdateProfile(auth);
+
+  let from = location?.state?.from?.pathname || "/";
+
   if (loading) {
     return <Loading></Loading>;
   }
 
-  if (error) {
-    toast.error(error.message, {
-      id: "registeredSuccess",
+  if (error || userUpdateError) {
+    toast.error(error.message || userUpdateError.message, {
+      id: "registerError",
     });
   }
 
   // Form Hook
   const onSubmit = async (data) => {
-    const name = data.name;
+    const displayName = data.name;
     const email = data.email;
     const password = data.password;
     const confirmPassword = data.confirmPassword;
@@ -39,12 +46,14 @@ const Register = () => {
     }
 
     await createUserWithEmailAndPassword(email, password);
+    await updateProfile({ displayName });
   };
   if (user) {
     toast.success("Registered Successfully", {
       id: "registeredSuccess ",
     });
-    navigate("/home");
+    console.log(user);
+    navigate(from, { replace: true });
   }
 
   return (

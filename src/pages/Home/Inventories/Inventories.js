@@ -12,7 +12,7 @@ const Inventories = () => {
 
   return (
     <div className="inventoriesContainer">
-      <h1 className="text-center">This is Inventories {inventories.length}</h1>
+      <h2 className="text-center">INVENTORIES {inventories.length}</h2>
     </div>
   );
 };
