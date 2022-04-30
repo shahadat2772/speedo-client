@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Mercedes-1",
+    "img": "https://i.ibb.co/GkrH8WV/pexels-saimon-6041001.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
+    "price": "120000",
+    "quantity": "76",
+    "supplier": "Elon Mask"
+  },
+  {
+    "name": "Mercedes-2",
+    "img": "https://i.ibb.co/GkrH8WV/pexels-saimon-6041001.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
+    "price": "120000",
+    "quantity": "76",
+    "supplier": "Elon Mask"
+  },
+  {
+    "name": "Mercedes-3",
+    "img": "https://i.ibb.co/GkrH8WV/pexels-saimon-6041001.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
+    "price": "120000",
+    "quantity": "76",
+    "supplier": "Elon Mask"
+  },
+  {
+    "name": "Mercedes-4",
+    "img": "https://i.ibb.co/GkrH8WV/pexels-saimon-6041001.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
+    "price": "120000",
+    "quantity": "76",
+    "supplier": "Elon Mask"
+  },
+  {
+    "name": "Mercedes-5",
+    "img": "https://i.ibb.co/GkrH8WV/pexels-saimon-6041001.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
+    "price": "120000",
+    "quantity": "76",
+    "supplier": "Elon Mask"
+  },
+  {
+    "name": "Mercedes-6",
+    "img": "https://i.ibb.co/GkrH8WV/pexels-saimon-6041001.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
+    "price": "120000",
+    "quantity": "76",
+    "supplier": "Elon Mask"
+  },
+  {
+    "name": "Mercedes-7",
+    "img": "https://i.ibb.co/GkrH8WV/pexels-saimon-6041001.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
+    "price": "120000",
+    "quantity": "76",
+    "supplier": "Elon Mask"
+  }
+]

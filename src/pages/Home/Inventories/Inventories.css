@@ -1,3 +1,11 @@
 .inventoriesContainer {
-  margin: 40px 40px;
+  /* margin: 40px 40px; */
+  margin: 40px 0px;
+}
+
+.inventories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 30px 0px;
+  gap: 20px;
 }
