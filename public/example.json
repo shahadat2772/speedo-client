@@ -5,7 +5,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
     "price": "120000",
     "quantity": "76",
-    "supplier": "Elon Mask"
+    "supplier": "Elon Mask",
+    "sold": "34"
   },
   {
     "name": "Mercedes-2",
@@ -13,7 +14,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
     "price": "120000",
     "quantity": "76",
-    "supplier": "Elon Mask"
+    "supplier": "Elon Mask",
+    "sold": "34"
   },
   {
     "name": "Mercedes-3",
@@ -21,7 +23,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
     "price": "120000",
     "quantity": "76",
-    "supplier": "Elon Mask"
+    "supplier": "Elon Mask",
+    "sold": "34"
   },
   {
     "name": "Mercedes-4",
@@ -29,7 +32,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
     "price": "120000",
     "quantity": "76",
-    "supplier": "Elon Mask"
+    "supplier": "Elon Mask",
+    "sold": "34"
   },
   {
     "name": "Mercedes-5",
@@ -37,7 +41,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
     "price": "120000",
     "quantity": "76",
-    "supplier": "Elon Mask"
+    "supplier": "Elon Mask",
+    "sold": "34"
   },
   {
     "name": "Mercedes-6",
@@ -45,7 +50,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
     "price": "120000",
     "quantity": "76",
-    "supplier": "Elon Mask"
+    "supplier": "Elon Mask",
+    "sold": "34"
   },
   {
     "name": "Mercedes-7",
@@ -53,6 +59,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
     "price": "120000",
     "quantity": "76",
-    "supplier": "Elon Mask"
+    "supplier": "Elon Mask",
+    "sold": "34"
   }
 ]

@@ -16,7 +16,7 @@ const Inventories = () => {
       <h2 className="text-center">INVENTORIES</h2>
       <div className="inventories">
         {inventories.map((inventory) => (
-          <Inventory inventory={inventory}></Inventory>
+          <Inventory key={inventory._id} inventory={inventory}></Inventory>
         ))}
       </div>
     </div>

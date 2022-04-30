@@ -6,6 +6,7 @@ import Register from "./pages/Login/Register/Register";
 import Login from "./pages/Login/Login/Login";
 import { Toaster } from "react-hot-toast";
 import RequireAuth from "./pages/Login/RequireAuth/RequireAuth";
+import InventoryDetail from "./pages/InventoryDetail/InventoryDetail";
 
 function App() {
   return (
@@ -14,6 +15,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
+        <Route
+          path="/inventory/:id"
+          element={
+            <RequireAuth>
+              <InventoryDetail></InventoryDetail>
+            </RequireAuth>
+          }
+        ></Route>
+
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
       </Routes>

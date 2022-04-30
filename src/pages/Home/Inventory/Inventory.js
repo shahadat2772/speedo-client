@@ -6,7 +6,8 @@ const Inventory = ({ inventory }) => {
   // Navigator
   const navigate = useNavigate();
 
-  const { name, img, price, description, _id, quantity, supplier } = inventory;
+  const { name, img, price, description, _id, quantity, supplier, sold } =
+    inventory;
   return (
     <div className="inventoryContainer">
       <div className="inventory">
@@ -15,6 +16,7 @@ const Inventory = ({ inventory }) => {
         <p>{description.slice(0, 80)}</p>
         <p>Price: {price}</p>
         <p>Quantity: {quantity}</p>
+        <p>Sold: {sold}</p>
         <p>Supplier: {supplier}</p>
         <button onClick={() => navigate(`/inventory/${_id}`)}>
           Manage Stock
