@@ -15,8 +15,32 @@ const InventoryDetail = () => {
       .then((data) => setInventory(data));
   }, [id]);
 
+  // Updating QUANTITY
   const handleUpdateQuantity = () => {
     fetch(`http://localhost:5000/updateQuantity`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(inventory),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        const [res, updatedInventory] = data;
+        if (res.acknowledged) {
+          setInventory(updatedInventory);
+        }
+      });
+  };
+
+  // Handling Restock
+  const handleRestock = (event) => {
+    event.preventDefault();
+    const quantity = event.target.restockQuantity.value;
+    console.log(quantity);
+
+    fetch(`http://localhost:5000/restock?restockQuantity=${quantity}`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -53,6 +77,17 @@ const InventoryDetail = () => {
         >
           Delivered
         </button>
+        <div className="mt-2">
+          <form onSubmit={handleRestock} action="">
+            <input
+              type="number"
+              placeholder="Restock Quantity"
+              name="restockQuantity"
+              id=""
+            />
+            <input type="submit" value="RESTOCK" />
+          </form>
+        </div>
       </div>
     </div>
   );
