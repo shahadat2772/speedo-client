@@ -22,7 +22,6 @@ const SocialLogin = () => {
         <small>Please wait</small>
       </p>
     );
-    // });
   } else {
     loadingElement = undefined;
   }
@@ -33,6 +32,9 @@ const SocialLogin = () => {
     });
   }
   if (user) {
+    toast.success("Logged in successfully.", {
+      id: "googleSignUpSuccess",
+    });
     navigate(from, { replace: true });
   }
 
