@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="footerContainer">
       <footer className="footer container">
         <div className="ps-2 newsletter">
-          <h4>NewsLetter</h4>
+          <p id="newsLetterHeader">NewsLetter</p>
           <p>
             By subscribing to our company newsletter you will always be
             up-to-date on our latest promotions, deals.
@@ -17,15 +17,15 @@ const Footer = () => {
           </div>
         </div>
         <div className="ps-2 contact">
-          <h4>Contact Us</h4>
+          <p id="contactUsHeader">Contact Us</p>
           <p>
             <b>Address:</b> 13 DIT Project, Middle Badda, Dhaka-1212.
           </p>
           <p>
-            <b>Phone:</b> 017101010101
+            <b>Email:</b> speedo1@gmail.com
           </p>
           <p>
-            <b>Email:</b> speedo1@gmail.com
+            <b>Phone:</b> 017121415131
           </p>
         </div>
         <div className="ps-2 copyRight">
