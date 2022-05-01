@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./InventoryDetail.css";
 
 const InventoryDetail = () => {
   const { id } = useParams();
+
+  // Navigator
+  const navigate = useNavigate();
 
   const [inventory, setInventory] = useState({});
 
@@ -86,6 +89,9 @@ const InventoryDetail = () => {
               id=""
             />
             <input type="submit" value="RESTOCK" />
+            <button onClick={() => navigate("/manageinventories")}>
+              Manage Inventories
+            </button>
           </form>
         </div>
       </div>
