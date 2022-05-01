@@ -34,7 +34,7 @@ const ManageInventories = () => {
       <h2 className="text-center mt-3">
         This is Manage inventory {inventories.length}
       </h2>
-      <div className="manageInventoriesContainer">
+      <div className="manageInventoriesContainer mb-4">
         {inventories.map((inventory) => (
           <div key={inventory._id}>
             <h3>{inventory.name}</h3>
@@ -44,6 +44,7 @@ const ManageInventories = () => {
           </div>
         ))}
       </div>
+      <button onClick={() => navigate("/addinventory")}>Add Inventory</button>
     </div>
   );
 };
