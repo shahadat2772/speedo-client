@@ -1,11 +1,18 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faMapLocationDot,
+  faEnvelope,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import "./Footer.css";
 
 const Footer = () => {
   return (
     <div className="footerContainer">
       <footer className="footer container">
-        <div className="ps-2 newsletter">
+        {/* NewsLetter */}
+        <div className="ps-3 newsletter">
           <p id="newsLetterHeader">NewsLetter</p>
           <p>
             By subscribing to our company newsletter you will always be
@@ -16,19 +23,30 @@ const Footer = () => {
             <button className="subscribeBtn">Subscribe</button>
           </div>
         </div>
-        <div className="ps-2 contact">
+        {/* Contact US */}
+        <div className="ps-3 contact">
           <p id="contactUsHeader">Contact Us</p>
           <p>
-            <b>Address:</b> 13 DIT Project, Middle Badda, Dhaka-1212.
+            <span className="contactIcon">
+              <FontAwesomeIcon icon={faMapLocationDot} />
+            </span>{" "}
+            13 DIT Project, Middle Badda, Dhaka-1212.
           </p>
           <p>
-            <b>Email:</b> speedo1@gmail.com
+            <span className="contactIcon">
+              <FontAwesomeIcon icon={faEnvelope} />
+            </span>{" "}
+            speedo1@gmail.com
           </p>
           <p>
-            <b>Phone:</b> 017121415131
+            <span className="contactIcon">
+              <FontAwesomeIcon icon={faPhone} />
+            </span>{" "}
+            017121415131
           </p>
         </div>
-        <div className="ps-2 copyRight">
+        {/* Copyright and branding */}
+        <div className="ps-3 copyRight">
           <h2>
             SPEE<span className="brandsRedPart">DO</span>
           </h2>
