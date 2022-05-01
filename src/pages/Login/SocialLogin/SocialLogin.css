@@ -1,0 +1,37 @@
+.googleLogo {
+  width: 35px;
+  height: 35px;
+}
+
+.aroundOR {
+  height: 2px;
+  width: 40%;
+  margin: 0px 6px;
+  background-color: rgba(199, 8, 27, 0.562);
+}
+
+.orContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialLoginBtn {
+  display: block;
+  height: 40px;
+  width: 100%;
+  /* margin-top: 8px; */
+  border: 1px solid gray;
+  background-color: rgba(199, 8, 27, 0.322);
+  color: rgba(255, 255, 255, 0.726);
+  border-radius: 10px;
+}
+
+.socialLoginBtn:hover {
+  background-color: rgba(199, 8, 27, 0.527);
+}
+
+.waitText {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.726);
+}

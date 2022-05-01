@@ -5,8 +5,9 @@ import "./Register.css";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { useUpdateProfile } from "react-firebase-hooks/auth";
+import SocialLogin from "../SocialLogin/SocialLogin";
 const Register = () => {
   // Navigator
   const location = useLocation();
@@ -92,6 +93,7 @@ const Register = () => {
         <p onClick={() => navigate("/login")} className="formToggleBtn">
           Have an account?
         </p>
+        <SocialLogin></SocialLogin>
       </div>
     </div>
   );

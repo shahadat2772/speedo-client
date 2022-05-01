@@ -1,10 +1,11 @@
 import React from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 import { auth } from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
   const location = useLocation();
@@ -67,6 +68,7 @@ const Login = () => {
           <p onClick={() => navigate("/register")} className="formToggleBtn">
             Don't have an account?
           </p>
+          <SocialLogin></SocialLogin>
         </div>
       </div>
     </div>

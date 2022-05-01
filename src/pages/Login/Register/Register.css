@@ -30,8 +30,7 @@
   border: 1px solid gray;
   display: block;
   background-color: rgba(199, 8, 27, 0.322);
-  color: white;
-  /* margin-top: 15px; */
+  color: rgba(255, 255, 255, 0.726);
 }
 
 .formSubmitBtn:hover {
