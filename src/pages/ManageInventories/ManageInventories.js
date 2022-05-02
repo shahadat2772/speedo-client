@@ -30,8 +30,8 @@ const ManageInventories = () => {
   };
 
   return (
-    <div>
-      <h2 className="text-center mt-3">
+    <div className="manageInventoriesContainer">
+      <h2 className="text-center">
         This is Manage inventory {inventories.length}
       </h2>
       <div className="manageInventoriesContainer mb-4">

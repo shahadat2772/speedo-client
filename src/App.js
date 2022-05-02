@@ -10,11 +10,13 @@ import InventoryDetail from "./pages/InventoryDetail/InventoryDetail";
 import ManageInventories from "./pages/ManageInventories/ManageInventories";
 import AddInventory from "./pages/AddInventory/AddInventory";
 import MyInventories from "./pages/MyInventories/MyInventories";
+// import HeaderMain from "./pages/Shared/HeaderMain/HeaderMain";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Header></Header>
+
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>

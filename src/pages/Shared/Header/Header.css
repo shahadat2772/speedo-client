@@ -3,3 +3,15 @@
   border: none;
   color: rgb(151, 151, 151);
 }
+
+.headerContainer {
+  position: relative;
+  width: 100wh;
+}
+
+.navber {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.459);
+  z-index: 1;
+}
