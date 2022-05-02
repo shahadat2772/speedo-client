@@ -6,10 +6,9 @@ const Banner = () => {
     <div>
       <div className="bannerImage">
         {/* <div className="bannerContent">
-          <p className="bannerHeader">
-            LET'S BOOM YOUR <br /> BUSINESS TOGETHER!
-          </p>
-          <p></p>
+          <h2>Let's Boom</h2>
+          <h2>Business your</h2>
+          <h2>With SPEEDO</h2>
         </div> */}
       </div>
     </div>
