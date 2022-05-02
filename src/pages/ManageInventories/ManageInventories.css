@@ -1,0 +1,17 @@
+.manageInventoriesContainer {
+  margin-top: 35px;
+}
+
+.deleteBtnTd button {
+  display: block;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  color: rgb(199, 11, 11);
+}
+
+.table {
+  margin-top: 35px;
+}

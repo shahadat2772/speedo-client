@@ -1,6 +1,12 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
+import { Table } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-
+import {
+  faArrowRight,
+  faTrashCan,
+  faPlus,
+} from "@fortawesome/free-solid-svg-icons";
 import "./ManageInventories.css";
 
 const ManageInventories = () => {
@@ -30,21 +36,41 @@ const ManageInventories = () => {
   };
 
   return (
-    <div className="manageInventoriesContainer">
-      <h2 className="text-center">
-        This is Manage inventory {inventories.length}
-      </h2>
-      <div className="manageInventoriesContainer mb-4">
-        {inventories.map((inventory) => (
-          <div key={inventory._id}>
-            <h3>{inventory.name}</h3>
-            <button onClick={() => handleDeleteInventory(inventory._id)}>
-              X
-            </button>
-          </div>
-        ))}
-      </div>
-      <button onClick={() => navigate("/addinventory")}>Add Inventory</button>
+    <div className="manageInventoriesContainer container">
+      <h2 className="text-center">MANAGE INVENTORIES</h2>
+
+      <Table className="table" striped bordered hover>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Quant</th>
+            <th>Supplier</th>
+            <th>Manage</th>
+          </tr>
+        </thead>
+        <tbody>
+          {inventories.map((inventory) => (
+            <tr>
+              <td>{inventories.indexOf(inventory) + 1}</td>
+              <td>{inventory.name}</td>
+              <td>{inventory.quantity}</td>
+              <td>{inventory.supplier}</td>
+              <td className="deleteBtnTd">
+                <button onClick={() => handleDeleteInventory(inventory._id)}>
+                  <FontAwesomeIcon icon={faTrashCan} />
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+      <button
+        className="manageInventoryBtn"
+        onClick={() => navigate("/addinventory")}
+      >
+        <FontAwesomeIcon icon={faArrowRight} /> ADD INVENTORY
+      </button>
     </div>
   );
 };
