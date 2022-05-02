@@ -1,9 +1,14 @@
+import { faArrowRight, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
+import { Table } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase.init";
 
 const MyInventories = () => {
+  const navigate = useNavigate();
   const [user, loading] = useAuthState(auth);
   const [inventories, setInventories] = useState([]);
 
@@ -32,18 +37,54 @@ const MyInventories = () => {
   };
 
   return (
-    <div>
-      <h2 className="text-center">Your Inventories {inventories.length}</h2>
-      <div className="myInventoriesContainer">
-        {inventories.map((inventory) => (
-          <div key={inventory._id}>
-            <h3>{inventory.name}</h3>
-            <button onClick={() => handleDeleteInventory(inventory._id)}>
-              X
-            </button>
-          </div>
-        ))}
-      </div>
+    // <div>
+    //   <h2 className="text-center">Your Inventories {inventories.length}</h2>
+    //   <div className="myInventoriesContainer">
+    //     {/* {inventories.map((inventory) => (
+    //       <div key={inventory._id}>
+    //         <h3>{inventory.name}</h3>
+    //         <button onClick={() => handleDeleteInventory(inventory._id)}>
+    //           X
+    //         </button>
+    //       </div>
+    //     ))} */}
+    //   </div>
+    // </div>
+    <div className="manageInventoriesContainer container">
+      <h2 className="text-center">YOUR INVENTORIES</h2>
+
+      <Table className="table" striped bordered hover>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Quant</th>
+            <th>Supplier</th>
+            <th>Manage</th>
+          </tr>
+        </thead>
+        <tbody>
+          {inventories.map((inventory) => (
+            <tr>
+              <td>{inventories.indexOf(inventory) + 1}</td>
+              <td>{inventory.name}</td>
+              <td>{inventory.quantity}</td>
+              <td>{inventory.supplier}</td>
+              <td className="deleteBtnTd">
+                <button onClick={() => handleDeleteInventory(inventory._id)}>
+                  <FontAwesomeIcon icon={faTrashCan} />
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+      <button
+        className="manageInventoryBtn"
+        onClick={() => navigate("/addinventory")}
+      >
+        <FontAwesomeIcon icon={faArrowRight} /> ADD INVENTORY
+      </button>
     </div>
   );
 };
