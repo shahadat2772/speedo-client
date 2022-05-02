@@ -1,18 +1,30 @@
 .bannerImage {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://i.ibb.co/P9LWTc2/pexels-samed-gojak-5290536.jpg");
-  height: 100vh;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.288), rgba(0, 0, 0, 0.274)),
+    url("https://i.ibb.co/VjGzRjF/Banner-BGMAIN.png"); */
+  background-image: url("https://i.ibb.co/JKf51NZ/MAINBGBANNERFINAL.jpg");
+  height: 700px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
 
-.bannerContent {
+/* .bannerContent {
   text-align: center;
+  width: 600px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+} */
+
+.bannerHeader {
+  font-size: 45px;
+}
+
+@media only screen and (max-width: 576px) {
+  .bannerImage {
+    height: 250px;
+  }
 }

@@ -5,17 +5,12 @@ const Banner = () => {
   return (
     <div>
       <div className="bannerImage">
-        <div className="bannerContent">
-          <h1>
-            LET'S BOOM YOUR <br /> BUSINESS TOGETHER
-          </h1>
-          <p>
-            SPEEDO Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Eius, mollitia. Aliquid veniam dicta voluptate vero totam
-            necessitatibus harum at illo.
+        {/* <div className="bannerContent">
+          <p className="bannerHeader">
+            LET'S BOOM YOUR <br /> BUSINESS TOGETHER!
           </p>
-          <button>Hire me</button>
-        </div>
+          <p></p>
+        </div> */}
       </div>
     </div>
   );
