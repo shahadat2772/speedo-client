@@ -1,11 +1,52 @@
-.newArrivalsContainer {
+.newArrivalContainer {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.newArrivalItemsContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: 40px;
-  margin-bottom: 40px;
+  gap: 25px;
 }
 
 .newArrivalInventory {
   width: 14rem;
   margin: 0px auto;
+  text-align: center;
+}
+
+.newArrivalHeader {
+  font-size: 37px;
+  line-height: 50px;
+  color: rgba(27, 27, 27, 0.884);
+  font-weight: 500;
+  margin-bottom: 45px;
+}
+
+.newArrivalItemHeader {
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-top: 6px;
+  color: #db2d2da6;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.newArrivalItemHeader:hover {
+  color: #db2d2dd3;
+}
+
+.newArrivalItemPriceTag {
+  font-weight: 500;
+  color: rgb(114, 114, 114);
+  margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 576px) {
+  .newArrivalItemsContainer {
+    grid-template-columns: 1fr;
+  }
+  .newArrivalHeader {
+    font-size: 25px;
+  }
 }
