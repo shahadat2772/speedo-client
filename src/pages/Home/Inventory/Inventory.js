@@ -12,13 +12,26 @@ const Inventory = ({ inventory }) => {
     <div className="inventoryContainer">
       <div className="inventory">
         <img className="img-fluid" src={img} alt="" />
-        <h3>{name}</h3>
-        <p>{description.slice(0, 80)}</p>
-        <p>Price: {price}</p>
-        <p>Quantity: {quantity}</p>
-        <p>Sold: {sold}</p>
-        <p>Supplier: {supplier}</p>
-        <button onClick={() => navigate(`/inventory/${_id}`)}>
+        <p className="inventoryHeader">{name}</p>
+        <p>{description.slice(0, 74)}</p>
+        <div className="inventoryInfoContainer">
+          <div className="infoPairs d-flex">
+            <p>Quantity:</p> <p>{quantity}</p>
+          </div>
+          <div className="infoPairs d-flex">
+            <p>Sold:</p> <p>{sold}</p>
+          </div>
+          <div className="infoPairs d-flex">
+            <p>Price:</p> <p>${price}</p>
+          </div>
+          <div className="infoPairs d-flex">
+            <p>Supplier:</p> <p className="ms-4">{supplier}</p>
+          </div>
+        </div>
+        <button
+          className="inventoryManageBtn"
+          onClick={() => navigate(`/inventory/${_id}`)}
+        >
           Manage Stock
         </button>
       </div>
