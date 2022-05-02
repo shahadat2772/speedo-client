@@ -36,6 +36,7 @@ const AddInventory = () => {
         <input placeholder="Supplier Name" required {...register("supplier")} />
         <input placeholder="Price" required {...register("price")} />
         <input placeholder="Img URL" required {...register("img")} />
+        <input placeholder="Email" required {...register("email")} />
         <textarea
           required
           placeholder="Short Description"

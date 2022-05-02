@@ -68,5 +68,55 @@
     "supplier": "Elon Mask",
     "sold": "34",
     "email": "shahadat27@gmail.com"
+  },
+  {
+    "name": "Mercedes-8",
+    "img": "https://i.ibb.co/GkrH8WV/pexels-saimon-6041001.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
+    "price": "120000",
+    "quantity": "76",
+    "supplier": "Elon Mask",
+    "sold": "34",
+    "email": "shahadat27@gmail.com"
+  },
+  {
+    "name": "Mercedes-9",
+    "img": "https://i.ibb.co/GkrH8WV/pexels-saimon-6041001.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
+    "price": "120000",
+    "quantity": "76",
+    "supplier": "Elon Mask",
+    "sold": "34",
+    "email": "shahadat27@gmail.com"
+  },
+  {
+    "name": "Mercedes-10",
+    "img": "https://i.ibb.co/GkrH8WV/pexels-saimon-6041001.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
+    "price": "120000",
+    "quantity": "76",
+    "supplier": "Elon Mask",
+    "sold": "34",
+    "email": "shahadat27@gmail.com"
+  },
+  {
+    "name": "Mercedes-11",
+    "img": "https://i.ibb.co/GkrH8WV/pexels-saimon-6041001.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
+    "price": "120000",
+    "quantity": "76",
+    "supplier": "Elon Mask",
+    "sold": "34",
+    "email": "shahadat27@gmail.com"
+  },
+  {
+    "name": "Mercedes-12",
+    "img": "https://i.ibb.co/GkrH8WV/pexels-saimon-6041001.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae, laborum rem perferendis incidunt quos sed tenetur. Eos ipsa saepe asperiores, autem consequatur reprehenderit molestiae ipsum alias eum est?",
+    "price": "120000",
+    "quantity": "76",
+    "supplier": "Elon Mask",
+    "sold": "34",
+    "email": "shahadat27@gmail.com"
   }
 ]
