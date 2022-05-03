@@ -20,19 +20,22 @@ const ManageInventories = () => {
   }, []);
 
   const handleDeleteInventory = (id) => {
-    console.log(id);
-    fetch(`http://localhost:5000/deleteInventory?id=${id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.deletedCount > 0) {
-          const restInventories = inventories.filter(
-            (inventory) => inventory._id !== id
-          );
-          setInventories(restInventories);
-        }
-      });
+    const confirm = window.confirm("You wanna delete?");
+
+    if (confirm) {
+      fetch(`http://localhost:5000/deleteInventory?id=${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            const restInventories = inventories.filter(
+              (inventory) => inventory._id !== id
+            );
+            setInventories(restInventories);
+          }
+        });
+    }
   };
 
   return (
@@ -51,7 +54,7 @@ const ManageInventories = () => {
         </thead>
         <tbody>
           {inventories.map((inventory) => (
-            <tr>
+            <tr key={inventory._id}>
               <td>{inventories.indexOf(inventory) + 1}</td>
               <td>{inventory.name}</td>
               <td>{inventory.quantity}</td>
