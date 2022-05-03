@@ -16,7 +16,7 @@ const Register = () => {
 
   // Hook For User Creation in firebase
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
   // Hook to update users info
   const [updateProfile, updating, userUpdateError] = useUpdateProfile(auth);
