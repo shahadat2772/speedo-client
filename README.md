@@ -1,4 +1,18 @@
-# Getting Started with Create React App
+# Hey there, Welcome to SPEEDO!
+
+This is speedo, talks about cars stock management. Got the latest car collection with huge stoke. <br> Managing stoke with SPEEDO is super easy and simple.
+
+## Visit [SPEEDO HERE](https://speedo-eb970.web.app)
+
+### Why to choose SPEEDO --
+
+- Got New Arrival and Report section.
+- UI is easy to use and user friendly.
+- Got tabular form for showing manage inventories item and my inventories items.
+- Got live sold quantity update as stock quantity.
+- Got fontawesome's icons.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
