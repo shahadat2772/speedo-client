@@ -99,7 +99,11 @@ const InventoryDetail = () => {
             </div>
             <div className="coreInfoPairs">
               <p>Supplier:</p>
-              <p className="ms-4">{supplier}</p>
+              <p>{supplier}</p>
+            </div>
+            <div className="coreInfoPairs">
+              <p>ID:</p>
+              <p className="ms-2">{_id}</p>
             </div>
           </div>
           <div className="otherFunc">

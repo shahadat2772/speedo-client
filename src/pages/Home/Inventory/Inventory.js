@@ -32,7 +32,7 @@ const Inventory = ({ inventory }) => {
           className="inventoryManageBtn"
           onClick={() => navigate(`/inventory/${_id}`)}
         >
-          Manage Stock
+          Stock Update
         </button>
       </div>
     </div>

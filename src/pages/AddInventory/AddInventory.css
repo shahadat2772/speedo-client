@@ -11,5 +11,29 @@
 
 .addInventoryForm {
   width: 400px;
-  margin: 50px auto;
+  margin: 0px auto;
+  margin-top: 30px;
+}
+
+.addItemContainer {
+  margin-top: 40px;
+}
+
+.addItemBtn {
+  background-color: rgba(199, 8, 27, 1);
+  font-weight: 500;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  height: 35px;
+}
+
+.addItemBtn:hover {
+  background-color: rgb(196, 0, 0);
+}
+
+@media only screen and (max-width: 576px) {
+  .addInventoryForm {
+    width: 320px;
+  }
 }

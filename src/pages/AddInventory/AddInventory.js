@@ -28,21 +28,52 @@ const AddInventory = () => {
   };
 
   return (
-    <div className="my-4">
-      <h2 className="text-center">Add Inventory</h2>
+    <div className="addItemContainer container">
+      <h2 className="text-center">ADD INVENTORY</h2>
       <form className="addInventoryForm" onSubmit={handleSubmit(onSubmit)}>
-        <input placeholder="Inventory Name" required {...register("name")} />
-        <input placeholder="Quantity" required {...register("quantity")} />
-        <input placeholder="Supplier Name" required {...register("supplier")} />
-        <input placeholder="Price" required {...register("price")} />
-        <input placeholder="Img URL" required {...register("img")} />
-        <input placeholder="Email" required {...register("email")} />
+        <input
+          type={`text`}
+          placeholder="Inventory Name"
+          required
+          {...register("name")}
+        />
+        <input
+          type={`number`}
+          placeholder="Quantity"
+          required
+          {...register("quantity")}
+        />
+        <input
+          type={`text`}
+          placeholder="Supplier Name"
+          required
+          {...register("supplier")}
+        />
+        <input
+          type={`number`}
+          placeholder="Price"
+          required
+          {...register("price")}
+        />
+        <input
+          type={`text`}
+          placeholder="Img URL"
+          required
+          {...register("img")}
+        />
+        <input
+          type={`email`}
+          placeholder="Email"
+          required
+          {...register("email")}
+        />
         <textarea
+          type={`text`}
           required
           placeholder="Short Description"
           {...register("description")}
         />
-        <input value={`ADD ITEM`} type="submit" />
+        <input className="addItemBtn" value={`Add Inventory`} type="submit" />
       </form>
     </div>
   );
