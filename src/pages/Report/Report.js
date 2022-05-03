@@ -1,12 +1,12 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./Report.css";
 import {
   faCar,
   faDroplet,
   faMoneyBill1Wave,
   faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./Report.css";
 
 const Report = () => {
   return (

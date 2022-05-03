@@ -1,11 +1,11 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Register.css";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { useUpdateProfile } from "react-firebase-hooks/auth";
 import SocialLogin from "../SocialLogin/SocialLogin";
 const Register = () => {

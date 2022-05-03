@@ -6,6 +6,7 @@ import "./AddInventory.css";
 const AddInventory = () => {
   const { register, handleSubmit, reset } = useForm();
 
+  // handling submit for adding a new item
   const onSubmit = (data) => {
     // Setting default sold quantity
     data["sold"] = "0";
@@ -30,6 +31,7 @@ const AddInventory = () => {
   return (
     <div className="addItemContainer container">
       <h2 className="text-center">ADD INVENTORY</h2>
+      {/* Form */}
       <form className="addInventoryForm" onSubmit={handleSubmit(onSubmit)}>
         <input
           type={`text`}

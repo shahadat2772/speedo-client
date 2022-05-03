@@ -26,6 +26,7 @@
   margin-bottom: 0px;
 }
 
+/* Media Break Point */
 @media only screen and (max-width: 576px) {
   .reports {
     grid-template-columns: 1fr;

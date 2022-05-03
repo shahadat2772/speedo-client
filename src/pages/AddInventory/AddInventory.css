@@ -32,6 +32,8 @@
   background-color: rgb(196, 0, 0);
 }
 
+/* Break Point  */
+
 @media only screen and (max-width: 576px) {
   .addInventoryForm {
     width: 320px;

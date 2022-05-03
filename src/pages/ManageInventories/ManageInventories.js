@@ -2,23 +2,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import {
-  faArrowRight,
-  faTrashCan,
-  faPlus,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import "./ManageInventories.css";
 
 const ManageInventories = () => {
   const navigate = useNavigate();
   const [inventories, setInventories] = useState([]);
 
+  // Getting inventories
   useEffect(() => {
     fetch("http://localhost:5000/inventory")
       .then((res) => res.json())
       .then((data) => setInventories(data));
   }, []);
 
+  // Deleting Inventory
   const handleDeleteInventory = (id) => {
     const confirm = window.confirm("You wanna delete?");
 

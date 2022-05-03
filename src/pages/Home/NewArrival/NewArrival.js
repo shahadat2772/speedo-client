@@ -3,9 +3,11 @@ import { useNavigate } from "react-router-dom";
 import "./NewArrival.css";
 
 const NewArrival = () => {
+  // Navigator
   const navigate = useNavigate();
   const [inventories, setInventories] = useState([]);
 
+  // Getting last four inventories
   useEffect(() => {
     fetch("http://localhost:5000/lastInventories")
       .then((res) => res.json())

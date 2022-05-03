@@ -6,6 +6,7 @@ const Blogs = () => {
   return (
     <div className="container">
       <div className="qna1">
+        {/* Qua-1 */}
         <h4 className=" mb-3">1. Javascript Vs Nodejs:</h4>
         <Table className="m-0" striped bordered hover>
           <thead>
@@ -58,6 +59,7 @@ const Blogs = () => {
         </Table>
       </div>
       <div className="qna2">
+        {/* Qua-2 */}
         <h4>2. When to use Mongodb and Nodejs</h4>
         <div className="que2Ans">
           <div className="ans1">
@@ -95,6 +97,7 @@ const Blogs = () => {
         </div>
       </div>
       <div className="qna4">
+        {/* Qua-2 */}
         <h4 className="my-3">2. SQL VS NOSQL database</h4>
         <Table className="m-0" striped bordered hover>
           <thead>
@@ -112,13 +115,11 @@ const Blogs = () => {
               </td>
               <td>They have dynamic schema.</td>
             </tr>
-
             <tr>
               <td>2</td>
               <td>RELATIONAL DATABASE MANAGEMENT SYSTEM (RDBMS).</td>
               <td>Non-relational or distributed database system.</td>
             </tr>
-
             <tr>
               <td>3</td>
               <td>These databases are best suited for complex queries.</td>
@@ -133,6 +134,7 @@ const Blogs = () => {
         </Table>
       </div>
       <div className="qna3">
+        {/* Qua-4 */}
         <h4>4. What is the purpose of JWT and how dose it work:</h4>
         <p>
           <i>

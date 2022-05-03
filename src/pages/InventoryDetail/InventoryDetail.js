@@ -10,8 +10,6 @@ const InventoryDetail = () => {
 
   const [inventory, setInventory] = useState({});
 
-  console.log(inventory);
-
   useEffect(() => {
     fetch(`http://localhost:5000/inventory/${id}`)
       .then((res) => res.json())
@@ -107,6 +105,7 @@ const InventoryDetail = () => {
             </div>
           </div>
           <div className="otherFunc">
+            {/* Restock Form */}
             <form onSubmit={handleRestock} action="">
               <input
                 id="restockQuantityInput"

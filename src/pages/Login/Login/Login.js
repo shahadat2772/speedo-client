@@ -1,10 +1,9 @@
-import { async } from "@firebase/util";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import {
   useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 import { auth } from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
@@ -51,6 +50,7 @@ const Login = () => {
     navigate(from, { replace: true });
   }
 
+  // Resetting Password
   const handleResetPassword = async () => {
     const email = emailRef.current.value;
     if (email) {

@@ -8,6 +8,7 @@ const Inventory = ({ inventory }) => {
 
   const { name, img, price, description, _id, quantity, supplier, sold } =
     inventory;
+
   return (
     <div className="inventoryContainer">
       <div className="inventory">

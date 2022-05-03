@@ -15,9 +15,6 @@ const Header = () => {
   };
 
   return (
-    // <div className="headerContainer">
-    //   <div className="navber">
-    //     <div className="subnav">
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="#home">
@@ -60,9 +57,6 @@ const Header = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

@@ -5,6 +5,7 @@ import { Table } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase.init";
+import Loading from "../Shared/Loading/Loading";
 
 const MyInventories = () => {
   const navigate = useNavigate();
@@ -19,6 +20,11 @@ const MyInventories = () => {
       .then((data) => setInventories(data));
   }, []);
 
+  if (loading) {
+    return <Loading></Loading>;
+  }
+
+  // Deleting inventory
   const handleDeleteInventory = (id) => {
     const confirm = window.confirm("You wanna delete?");
     if (confirm) {

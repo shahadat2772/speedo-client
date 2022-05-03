@@ -1,6 +1,4 @@
 .bannerImage {
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.288), rgba(0, 0, 0, 0.274)),
-    url("https://i.ibb.co/VjGzRjF/Banner-BGMAIN.png"); */
   background-image: url("https://i.ibb.co/V9kyXWy/BANNER-6.jpg");
   height: 100vh;
   background-position: center;
@@ -9,20 +7,19 @@
   position: relative;
 }
 
-.bannerContent {
-  /* text-align: center; */
+/* .bannerContent {
   position: absolute;
   top: 75%;
   left: 70%;
   transform: translate(-50%, -50%);
   color: white;
-  /* rotate: ; */
-}
+} */
 
 .bannerHeader {
   font-size: 45px;
 }
 
+/* Break Point for Banner */
 @media only screen and (max-width: 576px) {
   .bannerImage {
     height: 250px;
