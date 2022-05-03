@@ -10,6 +10,7 @@ import InventoryDetail from "./pages/InventoryDetail/InventoryDetail";
 import ManageInventories from "./pages/ManageInventories/ManageInventories";
 import AddInventory from "./pages/AddInventory/AddInventory";
 import MyInventories from "./pages/MyInventories/MyInventories";
+import NotFound from "./pages/Shared/NotFound/NotFound";
 // import HeaderMain from "./pages/Shared/HeaderMain/HeaderMain";
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
         ></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Toaster></Toaster>
     </div>

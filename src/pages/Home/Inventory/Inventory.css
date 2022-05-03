@@ -2,6 +2,8 @@
   width: 19rem;
   margin: 0px auto;
   text-align: center;
+  min-height: 522px;
+  position: relative;
 }
 
 .inventory p {
@@ -13,16 +15,19 @@
   font-size: 24px;
 }
 
-.inventoryManageBtn {
-  width: 100%;
+.stockUpdateBtn {
+  width: 19rem;
   border: 0;
   height: 38px;
   background-color: rgba(199, 8, 27, 1);
   color: rgba(238, 238, 238, 0.932);
   font-weight: 500;
+  display: block;
+  position: absolute;
+  bottom: 0;
 }
 
-.inventoryManageBtn:hover {
+.stockUpdateBtn:hover {
   background-color: rgb(184, 1, 19);
 }
 
