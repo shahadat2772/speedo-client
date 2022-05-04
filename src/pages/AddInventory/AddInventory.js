@@ -12,7 +12,7 @@ const AddInventory = () => {
     data["sold"] = "0";
     console.log(data);
 
-    fetch("http://localhost:5000/addInventory", {
+    fetch("https://hidden-chamber-41609.herokuapp.com/addInventory", {
       method: "POST",
       headers: {
         "content-type": "application/json",

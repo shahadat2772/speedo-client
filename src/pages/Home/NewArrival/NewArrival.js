@@ -9,7 +9,7 @@ const NewArrival = () => {
 
   // Getting last four inventories
   useEffect(() => {
-    fetch("http://localhost:5000/lastInventories")
+    fetch("https://hidden-chamber-41609.herokuapp.com/lastInventories")
       .then((res) => res.json())
       .then((data) => setInventories(data));
   }, []);

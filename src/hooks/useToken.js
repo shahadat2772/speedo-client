@@ -12,9 +12,12 @@ const useToken = (user) => {
     const getToken = async () => {
       //   console.log(user);
       if (email) {
-        const { data } = await axios.post("http://localhost:5000/token", {
-          email,
-        });
+        const { data } = await axios.post(
+          "https://hidden-chamber-41609.herokuapp.com/token",
+          {
+            email,
+          }
+        );
         setToken(data);
         localStorage.setItem("accessToken", data);
       }

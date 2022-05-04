@@ -11,7 +11,7 @@ const Inventories = () => {
 
   // Getting inventories
   useEffect(() => {
-    fetch("http://localhost:5000/inventory?limit=6")
+    fetch("https://hidden-chamber-41609.herokuapp.com/inventory?limit=6")
       .then((res) => res.json())
       .then((data) => setInventories(data));
   }, []);
