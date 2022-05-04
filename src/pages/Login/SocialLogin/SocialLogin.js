@@ -3,6 +3,7 @@ import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 import { auth } from "../../../firebase.init";
+import useToken from "../../../hooks/useToken";
 
 import "./SocialLogin.css";
 
@@ -32,6 +33,7 @@ const SocialLogin = () => {
       id: "socialLoginError",
     });
   }
+
   if (user) {
     toast.success("Logged in successfully.", {
       id: "googleSignUpSuccess",
