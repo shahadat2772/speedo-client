@@ -12,10 +12,11 @@ const SocialLogin = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  let from = location?.state?.from?.pathname || "/";
-
   // Hook to sign in with google
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  let from = location?.state?.from?.pathname || "/";
+
+  const [token] = useToken(user);
 
   let loadingElement;
   if (loading) {
@@ -34,7 +35,7 @@ const SocialLogin = () => {
     });
   }
 
-  if (user) {
+  if (token) {
     toast.success("Logged in successfully.", {
       id: "googleSignUpSuccess",
     });
