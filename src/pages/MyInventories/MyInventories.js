@@ -60,7 +60,7 @@ const MyInventories = () => {
         </thead>
         <tbody>
           {inventories.map((inventory) => (
-            <tr>
+            <tr key={inventory._id}>
               <td>{inventories.indexOf(inventory) + 1}</td>
               <td>{inventory.name}</td>
               <td>{inventory.quantity}</td>

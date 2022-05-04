@@ -19,11 +19,13 @@ const Inventories = () => {
   return (
     <div className="inventoriesContainer container">
       <p className="text-center inventoriesHeader">INVENTORIES</p>
+
       <div className="inventories">
         {inventories.map((inventory) => (
           <Inventory key={inventory._id} inventory={inventory}></Inventory>
         ))}
       </div>
+
       <div className="">
         <button
           className="manageInventoryBtn"

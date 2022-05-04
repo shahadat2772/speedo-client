@@ -39,7 +39,6 @@ const InventoryDetail = () => {
   const handleRestock = (event) => {
     event.preventDefault();
     const quantity = event.target.restockQuantity.value;
-    console.log(quantity);
     if (quantity > 0) {
       fetch(`http://localhost:5000/restock?restockQuantity=${quantity}`, {
         method: "POST",
@@ -58,7 +57,9 @@ const InventoryDetail = () => {
           }
         });
     } else {
-      toast.error("Please enter a positive number");
+      toast.error("Please enter a positive number", {
+        id: "PleaseEnterAPositiveNumber",
+      });
     }
   };
 

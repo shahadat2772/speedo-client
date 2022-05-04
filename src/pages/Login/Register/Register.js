@@ -53,7 +53,6 @@ const Register = () => {
     toast.success("Registered Successfully", {
       id: "registeredSuccess ",
     });
-    console.log(user);
     navigate(from, { replace: true });
   }
 

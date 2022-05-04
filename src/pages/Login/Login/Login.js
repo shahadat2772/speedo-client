@@ -6,6 +6,7 @@ import {
 import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 import { auth } from "../../../firebase.init";
+import useToken from "../../../hooks/useToken";
 import Loading from "../../Shared/Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
@@ -20,6 +21,8 @@ const Login = () => {
 
   const [sendPasswordResetEmail, sending, errorForPasswordReset] =
     useSendPasswordResetEmail(auth);
+
+  const [token] = useToken(user);
 
   // useRef for getting value from inputs
   const emailRef = useRef("");
@@ -36,14 +39,15 @@ const Login = () => {
     });
   }
 
-  // Form Hook
-  const handleSubmit = async () => {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
     const email = emailRef.current.value;
-    const password = emailRef.current.value;
+    const password = passwordRef.current.value;
 
     await signInWithEmailAndPassword(email, password);
   };
-  if (user) {
+  if (token) {
     toast.success("Logged in Successfully", {
       id: "LogInSuccess ",
     });
