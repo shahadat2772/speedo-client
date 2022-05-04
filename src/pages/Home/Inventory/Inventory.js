@@ -26,7 +26,7 @@ const Inventory = ({ inventory }) => {
             <p>Price:</p> <p>${price}</p>
           </div>
           <div className="infoPairs d-flex">
-            <p>Supplier:</p> <p className="ms-4">{supplier}</p>
+            <p>Supplier:</p> <p>{supplier}</p>
           </div>
         </div>
         <button
