@@ -1,5 +1,5 @@
 .inventory {
-  width: 19rem;
+  width: 18.5rem;
   margin: 0px auto;
   text-align: center;
   min-height: 522px;
@@ -16,7 +16,7 @@
 }
 
 .stockUpdateBtn {
-  width: 19rem;
+  width: 18.5rem;
   border: 0;
   height: 38px;
   background-color: rgba(199, 8, 27, 1);

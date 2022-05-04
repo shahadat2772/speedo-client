@@ -5,6 +5,7 @@ import Inventory from "../Inventory/Inventory";
 import "./Inventories.css";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Spinner } from "react-bootstrap";
+import axios from "axios";
 
 const Inventories = () => {
   const [spinner, setSpinner] = useState(false);
@@ -15,12 +16,18 @@ const Inventories = () => {
 
   // Getting inventories
   useEffect(() => {
-    setSpinner(true);
-    const getSixInventories = () => {
-      fetch("https://hidden-chamber-41609.herokuapp.com/inventory?limit=6")
-        .then((res) => res.json())
-        .then((data) => setInventories(data));
-      setSpinner(false);
+    const getSixInventories = async () => {
+      try {
+        setSpinner(true);
+        const { data } = await axios.get(
+          "https://hidden-chamber-41609.herokuapp.com/getFirstSixInventory"
+        );
+        setInventories(data);
+        setSpinner(false);
+      } catch (error) {
+        setSpinner(false);
+        console.error(error);
+      }
     };
 
     getSixInventories();

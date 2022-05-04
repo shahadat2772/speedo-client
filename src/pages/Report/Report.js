@@ -19,7 +19,7 @@ const Report = () => {
         </div>
         <div className="soldAmount">
           <FontAwesomeIcon className="icon" icon={faMoneyBill1Wave} />
-          <p className="number">750,000</p>
+          <p className="number">$750,000</p>
           <small>Amount Sold</small>
         </div>
         <div className="customerSatisfaction">

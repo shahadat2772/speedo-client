@@ -13,7 +13,9 @@ const Inventory = ({ inventory }) => {
     <div className="inventoryContainer">
       <div className="inventory">
         <img className="img-fluid" src={img} alt="" />
-        <p className="inventoryHeader">{name}</p>
+        <p className="inventoryHeader">
+          {name.length > 22 ? name.slice(0, 22) : name}
+        </p>
         <p>{description.slice(0, 74)}</p>
         <div className="inventoryInfoContainer">
           <div className="infoPairs d-flex">
