@@ -9,7 +9,7 @@
 
 .bannerContent {
   position: absolute;
-  top: 64%;
+  top: 68%;
   left: 33%;
   transform: translate(-50%, -50%);
   color: white;
@@ -40,15 +40,15 @@
     height: 250px;
   }
   .bannerText1 {
-    font-size: 20px;
+    font-size: 22px;
   }
   .bannerText2 {
     font-weight: 300;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 20px;
   }
   .bannerContent {
-    top: 63%;
+    top: 70%;
     left: 30%;
   }
 }
