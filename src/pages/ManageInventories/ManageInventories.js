@@ -11,7 +11,7 @@ const ManageInventories = () => {
 
   // Getting inventories
   useEffect(() => {
-    fetch("https://hidden-chamber-41609.herokuapp.com/inventory")
+    fetch("http://localhost:5000/inventory")
       .then((res) => res.json())
       .then((data) => setInventories(data));
   }, []);
@@ -21,12 +21,9 @@ const ManageInventories = () => {
     const confirm = window.confirm("You wanna delete?");
 
     if (confirm) {
-      fetch(
-        `https://hidden-chamber-41609.herokuapp.com/deleteInventory?id=${id}`,
-        {
-          method: "DELETE",
-        }
-      )
+      fetch(`http://localhost:5000/deleteInventory?id=${id}`, {
+        method: "DELETE",
+      })
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount > 0) {

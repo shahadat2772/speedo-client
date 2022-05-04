@@ -11,14 +11,14 @@ const InventoryDetail = () => {
   const [inventory, setInventory] = useState({});
 
   useEffect(() => {
-    fetch(`https://hidden-chamber-41609.herokuapp.com/inventory/${id}`)
+    fetch(`http://localhost:5000/inventory/${id}`)
       .then((res) => res.json())
       .then((data) => setInventory(data));
   }, [id]);
 
   // Updating QUANTITY
   const handleUpdateQuantity = () => {
-    fetch(`https://hidden-chamber-41609.herokuapp.com/updateQuantity`, {
+    fetch(`http://localhost:5000/updateQuantity`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -40,16 +40,13 @@ const InventoryDetail = () => {
     event.preventDefault();
     const quantity = event.target.restockQuantity.value;
     if (quantity > 0) {
-      fetch(
-        `https://hidden-chamber-41609.herokuapp.com/restock?restockQuantity=${quantity}`,
-        {
-          method: "POST",
-          headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify(inventory),
-        }
-      )
+      fetch(`http://localhost:5000/restock?restockQuantity=${quantity}`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(inventory),
+      })
         .then((res) => res.json())
         .then((data) => {
           console.log(data);

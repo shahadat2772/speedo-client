@@ -19,7 +19,7 @@ const MyInventories = () => {
       const email = user?.email;
       try {
         const { data } = await axios.get(
-          `https://hidden-chamber-41609.herokuapp.com/myInventories?email=${email}`,
+          `http://localhost:5000/myInventories?email=${email}`,
           {
             headers: {
               authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -47,12 +47,9 @@ const MyInventories = () => {
     const confirm = window.confirm("You wanna delete?");
     if (confirm) {
       console.log(id);
-      fetch(
-        `https://hidden-chamber-41609.herokuapp.com/deleteInventory?id=${id}`,
-        {
-          method: "DELETE",
-        }
-      )
+      fetch(`http://localhost:5000/deleteInventory?id=${id}`, {
+        method: "DELETE",
+      })
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount > 0) {
