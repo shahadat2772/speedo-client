@@ -8,6 +8,7 @@ import Loading from "../../Shared/Loading/Loading";
 import toast from "react-hot-toast";
 import { useUpdateProfile } from "react-firebase-hooks/auth";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import useToken from "../../../hooks/useToken";
 const Register = () => {
   // Navigator
   const location = useLocation();
@@ -21,6 +22,8 @@ const Register = () => {
   // Hook to update users info
   const [updateProfile, updating, userUpdateError] = useUpdateProfile(auth);
 
+  const [token] = useToken(user);
+
   let from = location?.state?.from?.pathname || "/";
 
   if (loading) {
@@ -31,6 +34,13 @@ const Register = () => {
     toast.error(error.message || userUpdateError.message, {
       id: "registerError",
     });
+  }
+
+  if (token) {
+    toast.success("Registered Successfully", {
+      id: "registeredSuccess ",
+    });
+    navigate(from, { replace: true });
   }
 
   // Form Hook
@@ -49,12 +59,6 @@ const Register = () => {
     await createUserWithEmailAndPassword(email, password);
     await updateProfile({ displayName });
   };
-  if (user) {
-    toast.success("Registered Successfully", {
-      id: "registeredSuccess ",
-    });
-    navigate(from, { replace: true });
-  }
 
   return (
     <div className="formBanner">

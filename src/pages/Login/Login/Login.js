@@ -1,3 +1,4 @@
+import { signOut } from "firebase/auth";
 import React, { useRef } from "react";
 import {
   useSendPasswordResetEmail,
@@ -39,6 +40,13 @@ const Login = () => {
     });
   }
 
+  if (token) {
+    toast.success("Logged in Successfully", {
+      id: "LogInSuccess ",
+    });
+    navigate(from, { replace: true });
+  }
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -47,12 +55,6 @@ const Login = () => {
 
     await signInWithEmailAndPassword(email, password);
   };
-  if (token) {
-    toast.success("Logged in Successfully", {
-      id: "LogInSuccess ",
-    });
-    navigate(from, { replace: true });
-  }
 
   // Resetting Password
   const handleResetPassword = async () => {

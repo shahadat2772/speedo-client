@@ -1,5 +1,7 @@
 import { faArrowRight, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from "axios";
+import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -12,12 +14,28 @@ const MyInventories = () => {
   const [user, loading] = useAuthState(auth);
   const [inventories, setInventories] = useState([]);
 
-  const email = user?.email;
-
   useEffect(() => {
-    fetch(`http://localhost:5000/inventory?email=${email}`)
-      .then((res) => res.json())
-      .then((data) => setInventories(data));
+    const getMyItems = async () => {
+      const email = user?.email;
+      try {
+        const { data } = await axios.get(
+          `http://localhost:5000/myInventories?email=${email}`,
+          {
+            headers: {
+              authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+            },
+          }
+        );
+        setInventories(data);
+      } catch (error) {
+        if (error.response.status === 401 || error.response.status === 403) {
+          signOut(auth);
+          navigate("/login");
+        }
+      }
+    };
+
+    getMyItems();
   }, []);
 
   if (loading) {
