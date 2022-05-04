@@ -1,5 +1,5 @@
 .bannerImage {
-  background-image: url("https://i.ibb.co/V9kyXWy/BANNER-6.jpg");
+  background-image: url("https://i.ibb.co/V27KmPT/BG-MAIN-SUPER.jpg");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -7,13 +7,28 @@
   position: relative;
 }
 
-/* .bannerContent {
+.bannerContent {
   position: absolute;
-  top: 75%;
-  left: 70%;
+  top: 64%;
+  left: 33%;
   transform: translate(-50%, -50%);
   color: white;
-} */
+}
+
+.bannerText1 {
+  font-size: 70px;
+  margin: 0;
+  font-weight: 600;
+  font-family: "Open Sans", sans-ser;
+}
+.bannerText2 {
+  font-weight: 300;
+  font-size: 70px;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  line-height: 50px;
+  color: rgb(199, 8, 27);
+}
 
 .bannerHeader {
   font-size: 45px;
@@ -23,5 +38,17 @@
 @media only screen and (max-width: 576px) {
   .bannerImage {
     height: 250px;
+  }
+  .bannerText1 {
+    font-size: 20px;
+  }
+  .bannerText2 {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .bannerContent {
+    top: 63%;
+    left: 30%;
   }
 }
