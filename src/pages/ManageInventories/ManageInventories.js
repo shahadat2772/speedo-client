@@ -9,7 +9,6 @@ import axios from "axios";
 
 const ManageInventories = () => {
   const [spinner, setSpinner] = useState(false);
-  console.log(spinner);
 
   const navigate = useNavigate();
   const [inventories, setInventories] = useState([]);

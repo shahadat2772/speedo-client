@@ -1,16 +1,20 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 import "./AddInventory.css";
 
 const AddInventory = () => {
+  const navigate = useNavigate();
+
   const { register, handleSubmit, reset } = useForm();
 
   // handling submit for adding a new item
   const onSubmit = (data) => {
     // Setting default sold quantity
     data["sold"] = "0";
-    console.log(data);
 
     fetch("https://hidden-chamber-41609.herokuapp.com/addInventory", {
       method: "POST",
@@ -77,6 +81,14 @@ const AddInventory = () => {
         />
         <input className="addItemBtn" value={`Add Inventory`} type="submit" />
       </form>
+      <div className="">
+        <button
+          className="manageInventoryBtn"
+          onClick={() => navigate("/myinventories")}
+        >
+          <FontAwesomeIcon icon={faArrowRight} /> MY INVENTORIES
+        </button>
+      </div>
     </div>
   );
 };

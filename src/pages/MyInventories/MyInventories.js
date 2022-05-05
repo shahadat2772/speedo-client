@@ -55,7 +55,6 @@ const MyInventories = () => {
   const handleDeleteInventory = (id) => {
     const confirm = window.confirm("You wanna delete?");
     if (confirm) {
-      console.log(id);
       fetch(
         `https://hidden-chamber-41609.herokuapp.com/deleteInventory?id=${id}`,
         {
@@ -76,7 +75,7 @@ const MyInventories = () => {
 
   return (
     <div className="manageInventoriesContainer container">
-      <h2 className="text-center">YOUR INVENTORIES</h2>
+      <h2 className="text-center">MY INVENTORIES</h2>
 
       {spinner ? (
         <div className="my-4 d-flex justify-content-center">

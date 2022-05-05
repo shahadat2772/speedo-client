@@ -27,7 +27,6 @@ const InventoryDetail = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         const [res, updatedInventory] = data;
         if (res.acknowledged) {
           setInventory(updatedInventory);
@@ -52,7 +51,6 @@ const InventoryDetail = () => {
       )
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           const [res, updatedInventory] = data;
           if (res.acknowledged) {
             setInventory(updatedInventory);
@@ -122,7 +120,13 @@ const InventoryDetail = () => {
             <button
               className="deliveredBtn"
               onClick={() => {
-                handleUpdateQuantity(_id);
+                if (quantity !== 0) {
+                  handleUpdateQuantity(_id);
+                } else {
+                  toast.error("Please restock this item", {
+                    id: "RestockItemErr",
+                  });
+                }
               }}
             >
               Delivered

@@ -12,8 +12,6 @@ const Inventories = () => {
   const navigate = useNavigate();
   const [inventories, setInventories] = useState([]);
 
-  console.log(spinner);
-
   // Getting inventories
   useEffect(() => {
     const getSixInventories = async () => {
