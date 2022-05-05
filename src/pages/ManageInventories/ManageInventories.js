@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { faArrowRight, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { faPlusCircle, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import "./ManageInventories.css";
 import { Spinner } from "react-bootstrap";
 import axios from "axios";
@@ -108,7 +108,7 @@ const ManageInventories = () => {
         className="manageInventoryBtn"
         onClick={() => navigate("/addinventory")}
       >
-        <FontAwesomeIcon icon={faArrowRight} /> ADD INVENTORY
+        <FontAwesomeIcon icon={faPlusCircle} /> ADD INVENTORY
       </button>
     </div>
   );

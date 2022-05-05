@@ -31,9 +31,10 @@ const Login = () => {
 
   let from = location?.state?.from?.pathname || "/";
 
-  if (loading) {
+  if (loading || sending) {
     return <Loading></Loading>;
   }
+
   if (error) {
     toast.error(error.message, {
       id: "loginError",
@@ -61,7 +62,13 @@ const Login = () => {
     const email = emailRef.current.value;
     if (email) {
       await sendPasswordResetEmail(email);
-      toast.success("Password reset email");
+      if (errorForPasswordReset) {
+        toast.error(errorForPasswordReset.message, {
+          id: "passwordResetErr",
+        });
+      } else {
+        toast.success("Password reset email");
+      }
     } else {
       toast.error("Please enter an email.");
     }

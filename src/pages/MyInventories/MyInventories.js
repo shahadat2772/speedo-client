@@ -1,4 +1,8 @@
-import { faArrowRight, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faTrashCan,
+  faPlusCircle,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import { signOut } from "firebase/auth";
@@ -111,7 +115,7 @@ const MyInventories = () => {
         className="manageInventoryBtn"
         onClick={() => navigate("/addinventory")}
       >
-        <FontAwesomeIcon icon={faArrowRight} /> ADD INVENTORY
+        <FontAwesomeIcon icon={faPlusCircle} /> ADD INVENTORY
       </button>
     </div>
   );
