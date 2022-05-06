@@ -36,8 +36,9 @@ const Inventories = () => {
       <p className="text-center inventoriesHeader">INVENTORIES</p>
 
       <div className="inventories">
+        {/* Setting the spinner */}
         {spinner ? (
-          <div className="my-4 d-flex justify-content-center">
+          <div className="my-4 d-flex justify-content-center spinnerInManageInventory">
             <Spinner animation="border" variant="dark" />
           </div>
         ) : (

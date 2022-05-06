@@ -65,9 +65,9 @@ const ManageInventories = () => {
   return (
     <div className="manageInventoriesContainer container">
       <h2 className="text-center">MANAGE INVENTORIES</h2>
-
+      {/* Setting spinner */}
       {spinner ? (
-        <div className="my-4 d-flex justify-content-center">
+        <div className="my-4 d-flex justify-content-center spinnerInManageInventory">
           <Spinner animation="border" variant="dark" />
         </div>
       ) : (

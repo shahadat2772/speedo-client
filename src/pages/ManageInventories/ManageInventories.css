@@ -16,3 +16,8 @@
 .table {
   margin-top: 35px;
 }
+
+.spinnerInManageInventory {
+  height: 50vh;
+  align-items: center;
+}

@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./InventoryDetail.css";
 import toast from "react-hot-toast";
-const InventoryDetail = () => {
-  const { id } = useParams();
 
+const InventoryDetail = () => {
   // Navigator
   const navigate = useNavigate();
+
+  const { id } = useParams();
 
   const [inventory, setInventory] = useState({});
 
@@ -91,7 +92,7 @@ const InventoryDetail = () => {
             </div>
             <div className="coreInfoPairs">
               <p>Quant:</p>
-              <p>{quantity}</p>
+              <p>{quantity !== 0 ? quantity : "Stock-out"}</p>
             </div>
             <div className="coreInfoPairs">
               <p>Sold:</p>
