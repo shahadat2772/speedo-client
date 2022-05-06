@@ -9,8 +9,8 @@
 .inventories .maniInventoriesContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 50px;
+  grid-column-gap: 25px;
+  grid-row-gap: 55px;
 }
 
 .inventoriesContainer {
