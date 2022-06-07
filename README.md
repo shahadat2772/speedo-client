@@ -6,8 +6,11 @@
 
 ### Why to choose SPEEDO -
 
-- Got New Arrival and Report section.
-- UI is easy to use and user friendly.
+- Consistent in look and feel, interactive, and mobile responsive.
+- Adding and managing stocks in speedo is snappy.
+- Find the latest added product in the New Arrival section.
+- Got a bussiness summery section.
+- Easy to use and user friendly.
 - Got tabular form for showing manage inventories item and my inventories items.
 - Got live sold quantity update as stock quantity.
 - Got fontawesome's icons.
